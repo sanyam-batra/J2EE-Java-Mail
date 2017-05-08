@@ -51,7 +51,7 @@ public void service(HttpServletRequest req,HttpServletResponse res)throws Servle
 //		}
 //        out.println(una);
 	java.util.Date d = new java.util.Date();
-	System.out.println("the date is " + d.getDate());
+	System.out.println("the date is " + d);
         Mailusers mm=mailusersFacade.get_user(to);
         System.out.println(mm.getUsername());
         boolean var=mssginfoFacade.add_msg(mm, sub, msg, ms.getUsername(),d);
@@ -59,6 +59,7 @@ public void service(HttpServletRequest req,HttpServletResponse res)throws Servle
 	//st.execute("insert into "+to+" values('"+una+"','"+sub+"','"+msg+"','"+d.getDay()+"/"+d.getMonth()+"/"+d.getYear()+"')");
 	out.println("<body bgcolor=teal><font color=white><h4>Your Message has been send suceffully,do u want to <FONT COLOR=YELLOW> <a href='http://localhost:8080/Java_Mail-war/compose.html'><I>send</I></FONT></a>  another message</h4></font></body>");
 	}catch(Exception e)
-	{out.println(e.toString());}
+	{if(e.toString().equals("java.lang.NullPointerException"))
+                            out.print("Your Session has expired . Please Re-login!");}
 }
 }

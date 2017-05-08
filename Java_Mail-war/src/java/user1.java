@@ -10,6 +10,8 @@ import proj.MailusersFacadeLocal;
 @WebServlet(urlPatterns = {"/user1"})
 public class user1 extends HttpServlet
 {
+   
+   
 
     @EJB
     private MailusersFacadeLocal mailusersFacade;
@@ -31,6 +33,13 @@ public class user1 extends HttpServlet
 	}
 	public void service(HttpServletRequest req,HttpServletResponse res) throws ServletException,IOException
 	{ 
+            
+            System.out.println("abc");
+            res.setHeader("Cache-Control","no-cache,no-store,must-revalidate");//HTTP 1.1
+            res.setHeader("Pragma","no-cache"); //HTTP 1.0
+            res.setDateHeader ("Expires", 0); //prevents caching at the proxy server
+            //res.sendRedirect("home.html");
+            
 		try
 		{
  		res.setContentType("text/html");
@@ -51,7 +60,10 @@ public class user1 extends HttpServlet
 //				Cookie cook=new Cookie("signin1",u);
 //				res.addCookie(cook);
                                 //out.println("correct username <a href='http://localhost:8080/Java_Mail-war/inbox.html'> inbox");
+                                
 				req.getSession().setAttribute("login", rs);
+                                req.getSession().setMaxInactiveInterval(100);
+                                
                                 req.getRequestDispatcher("/inbox.html").forward(req, res);
 				
 			
@@ -60,6 +72,7 @@ public class user1 extends HttpServlet
 		else
 			out.println("<h1>Invalid user Name,press back button and try again....</h1>"); 
 		}catch(Exception e)
-		{out.println("Error"+e.toString());}
+		{
+                    out.println("Error"+e.toString());}
 	}
 }

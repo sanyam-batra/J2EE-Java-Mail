@@ -2,6 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/Java_Mail/Java_Mail-war/web/inbox.html</file>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/Java_Mail/Java_Mail-war/src/java/user1.java</file>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/Java_Mail/Java_Mail-war/src/java/sendmsg.java</file>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/Java_Mail/Java_Mail-war/src/java/getmsg.java</file>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/Java_Mail/Java_Mail-war/web/mailinbox.htm</file>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/Java_Mail/Java_Mail-war/src/java/sentservlet.java</file>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/Java_Mail/Java_Mail-war/src/java/inboxservlet.java</file>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/Java_Mail/Java_Mail-war/web/usersignup.html</file>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/Java_Mail/Java_Mail-war/src/java/userloginn.java</file>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/Java_Mail/Java_Mail-war/web/left.html</file>
+        </group>
     </open-files>
 </project-private>

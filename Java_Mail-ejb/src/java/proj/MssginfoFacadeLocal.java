@@ -33,5 +33,10 @@ public interface MssginfoFacadeLocal {
     List<Mssginfo> get_msgs(Mailusers too);
 
     boolean add_msg(Mailusers too, String sub, String msg,String fromm,Date d);
+
+    List<Mssginfo> get_msg_date(String uid);
+
+    boolean delete_mail(String uid);
     
+    public List<Mssginfo> sent_mail(String mid);
 }

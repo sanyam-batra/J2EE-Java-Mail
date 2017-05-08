@@ -39,6 +39,10 @@ public class userloginn extends HttpServlet
     @Override
     public void doPost(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException
 {
+    System.out.println("abc");
+            res.setHeader("Cache-Control","no-cache,no-store,must-revalidate");//HTTP 1.1
+            res.setHeader("Pragma","no-cache"); //HTTP 1.0
+            res.setDateHeader ("Expires", 0); 
     try
 	{
             
@@ -95,7 +99,11 @@ public class userloginn extends HttpServlet
 //        String result=authImpl.SignUp(username, password, age, gender, city, nation, sex, pincode, state);
 //	req.getRequestDispatcher("/inbox.html").forward(req, res);
         Mailusers rs = mailusersFacade.login_user(username,password);
+        System.out.println(rs);
         req.getSession().setAttribute("login", rs);
+        req.getSession().setMaxInactiveInterval(10);
+//        if(req.getSession().getAttribute("login")==null)
+//        res.sendRedirect("home.html");
         req.getRequestDispatcher("/inbox.html").forward(req, res);
 	}catch(Exception e)
 		{System.out.println(e.toString());}

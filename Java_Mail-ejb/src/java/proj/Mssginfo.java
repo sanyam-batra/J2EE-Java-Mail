@@ -43,7 +43,7 @@ import javax.xml.bind.annotation.XmlTransient;
 public class Mssginfo implements Serializable {
 
     @Column(name = "date")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
     private static final long serialVersionUID = 1L;
@@ -51,7 +51,7 @@ public class Mssginfo implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "mid")
-    private Integer mid;
+    private String mid;
     @Size(max = 20)
     @Column(name = "fromm")
     private String fromm;
@@ -76,15 +76,15 @@ public class Mssginfo implements Serializable {
     public Mssginfo() {
     }
 
-    public Mssginfo(Integer mid) {
+    public Mssginfo(String mid) {
         this.mid = mid;
     }
 
-    public Integer getMid() {
+    public String getMid() {
         return mid;
     }
 
-    public void setMid(Integer mid) {
+    public void setMid(String mid) {
         this.mid = mid;
     }
 

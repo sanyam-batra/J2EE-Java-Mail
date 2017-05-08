@@ -7,7 +7,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import proj.Mailusers;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2017-04-28T14:14:20")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2017-05-04T16:09:06")
 @StaticMetamodel(Mssginfo.class)
 public class Mssginfo_ { 
 
@@ -16,7 +16,7 @@ public class Mssginfo_ {
     public static volatile SingularAttribute<Mssginfo, String> ccc;
     public static volatile SingularAttribute<Mssginfo, Mailusers> too;
     public static volatile SingularAttribute<Mssginfo, String> subjectt;
-    public static volatile SingularAttribute<Mssginfo, Integer> mid;
+    public static volatile SingularAttribute<Mssginfo, String> mid;
     public static volatile CollectionAttribute<Mssginfo, Mailusers> mailusersCollection;
     public static volatile SingularAttribute<Mssginfo, String> bodyy;
     public static volatile SingularAttribute<Mssginfo, String> bccc;
